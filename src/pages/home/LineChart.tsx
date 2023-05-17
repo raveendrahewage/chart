@@ -22,7 +22,7 @@ ChartJS.register(
     Legend
 );
 
-export const options = {
+const options = {
     responsive: true,
     plugins: {
         legend: {
@@ -33,11 +33,27 @@ export const options = {
             text: 'SMS 2.0 Line Chart',
         },
     },
+    scales: {
+        x: {
+            title: {
+                display: true,
+                text: 'Days',
+                position: 'end'
+            }
+        },
+        y: {
+            beginAtZero: true,
+            title: {
+                display: true,
+                text: 'SAH'
+            }
+        }
+    }
 };
 
 const labels = ['1', '2', '3', '4', '5', '6', '7', '8'];
 
-export const data = {
+const data = {
     labels,
     datasets: [
         {
